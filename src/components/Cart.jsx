@@ -30,16 +30,16 @@ const Cart = () => {
   return (
     <>
     <div className='flex flex-col md:flex-row flex-wrap p-4'>
-      <div className='w-full md:w-3/4 p-10'>
+      <div className='w-full md:w-3/4 p-2 md:p-5'>
       {items.length>0?items.map((item) => 
         (
-          <div key={item.id} className='flex justify-center items-center border-b h-56 p-2 w-full my-4 border-b-gray-400'>
-            <div className='w-1/4 p-4'>
+          <div key={item.id} className='flex justify-center items-center border-b md:h-56 p-2 w-full my-4 border-b-gray-400'>
+            <div className='w-1/4 md:p-4'>
               <img className="max-h-52" src={item.image} alt="alter"></img>
             </div>
-            <div className='w-3/4 p-4'>
-              <h1 className="font-sans font-medium text-2xl mb-2">{item.title}</h1>
-              <h1 className='font-medium text-xl mb-2'>{item.quantity} X ${item.price} = ${item.price*item.quantity}</h1>
+            <div className='w-3/4 p-2 md:p-4'>
+              <h1 className="font-sans font-medium text-sm md:text-2xl mb-2">{item.title}</h1>
+              <h1 className='font-medium text-sm md:text-xl mb-2'>{item.quantity} X ${item.price} = ${item.price*item.quantity}</h1>
               <div className='flex my-2'>  
                 <button onClick={() => removeCart(item)} className='px-2 py-1 border border-gray-400 text-gray-700'><FaMinus/></button>
                 <p className='px-3 py-1 border border-gray-400 text-gray-700'>{item.quantity}</p>
@@ -52,7 +52,7 @@ const Cart = () => {
           <img src={EmptyCart}></img>
         </div>)}
     </div>
-    <div className='flex flex-col gap-3 w-full md:w-1/4 md:mt-10 p-10 md:p-3'>
+    <div className='flex flex-col gap-3 w-full md:w-1/4 md:mt-10 md:p-5 p-2'>
       <div className='flex justify-between'>
         <h1>Items Total:</h1>
         <h1>$ {Math.round(total*100)/100}</h1>
