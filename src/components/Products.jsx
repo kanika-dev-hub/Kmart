@@ -37,7 +37,7 @@ const Products = () => {
     const Loading = () => {
         return (
             <>
-            <div className='flex w-5/6 mx-auto justify-center items-center gap-5'>
+            <div className='flex flex-wrap w-5/6 mx-auto justify-center items-center gap-5'>
                 <Skeleton width={250} height={300}/>
                 <Skeleton width={250} height={300}/>
                 <Skeleton width={250} height={300}/>
@@ -51,16 +51,16 @@ const Products = () => {
     <div className='text-center w-11/12 mx-auto'>
         <h1 className='text-5xl font-bold font-serif mt-5'>Latest Products</h1>
         <hr className='w-5/6 mx-auto mb-10'/>
-        <div className='flex gap-2 justify-center mb-5'>
-            <button className='px-2 py-1 border border-black/20 rounded-md hover:border-black'
+        <div className='flex flex-wrap gap-2 justify-center mb-5'>
+            <button className='px-0.5 text-sm sm:text-base sm:px-2 sm:py-1 border border-black/20 rounded-md hover:border-black'
             onClick={() => setFilter(data)}>All</button>
-            <button className='px-2 py-1 border border-black/20 rounded-md hover:border-black'
+            <button className='px-0.5 text-sm sm:text-base sm:px-2 sm:py-1 border border-black/20 rounded-md hover:border-black'
             onClick={() => filterProduct("men's clothing")}>Men's Clothing</button>
-            <button className='px-2 py-1 border border-black/20 rounded-md hover:border-black'
+            <button className='px-0.5 text-sm sm:text-base border border-black/20 rounded-md hover:border-black'
             onClick={() => filterProduct("women's clothing")}>Women's Clothing</button>
-            <button className='px-2 py-1 border border-black/20 rounded-md hover:border-black'
+            <button className='px-0.5 text-sm sm:text-base border border-black/20 rounded-md hover:border-black'
             onClick={() => filterProduct("jewelery")}>Jewellery</button>
-            <button className='px-2 py-1 border border-black/20 rounded-md hover:border-black'
+            <button className='px-0.5 text-sm sm:text-base border border-black/20 rounded-md hover:border-black'
             onClick={() => filterProduct("electronics")}>Electronics</button>
         </div>
         {loading?<Loading/>:filter?.length>0? 

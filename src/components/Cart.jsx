@@ -29,11 +29,11 @@ const Cart = () => {
 
   return (
     <>
-    <div className='flex p-5'>
-      <div className='w-3/4 p-10'>
+    <div className='flex flex-col md:flex-row flex-wrap p-4'>
+      <div className='w-full md:w-3/4 p-10'>
       {items.length>0?items.map((item) => 
         (
-          <div className='flex justify-center items-center border-b h-56 p-2 w-full my-4 border-b-gray-400'>
+          <div key={item.id} className='flex justify-center items-center border-b h-56 p-2 w-full my-4 border-b-gray-400'>
             <div className='w-1/4 p-4'>
               <img className="max-h-52" src={item.image} alt="alter"></img>
             </div>
@@ -52,10 +52,10 @@ const Cart = () => {
           <img src={EmptyCart}></img>
         </div>)}
     </div>
-    <div className='flex flex-col gap-3 w-1/4 mt-10 p-5'>
+    <div className='flex flex-col gap-3 w-full md:w-1/4 md:mt-10 p-10 md:p-3'>
       <div className='flex justify-between'>
         <h1>Items Total:</h1>
-        <h1>$ {total}</h1>
+        <h1>$ {Math.round(total*100)/100}</h1>
       </div>
       <div className='flex justify-between'>
         <h1>Delivery:</h1>
