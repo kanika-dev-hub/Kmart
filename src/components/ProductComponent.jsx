@@ -14,7 +14,7 @@ const ProductComponent = ({product}) => {
         <p className='text-sm'>{category}</p>  
       </div>
      </div>  
-    <button className='w-3/4 mx-auto px-4 py-1 rounded-lg text-red-950 bg-gray-400'>Add to Cart</button>
+    <button className='w-3/4 mx-auto px-4 py-1 rounded-lg text-red-950 bg-gray-400'>View Product</button>
     </Link>  
   )
 }       
